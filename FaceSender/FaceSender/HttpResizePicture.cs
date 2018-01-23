@@ -63,14 +63,13 @@ namespace FaceSender
             PictureResizeRequest pictureResizeRequest = JsonConvert.DeserializeObject<PictureResizeRequest>(requestBody);
             return pictureResizeRequest;
         }
+        
+    }
 
-
-        public class PictureResizeRequest
-        {
-            public string FileName { get; set; }
-            public string Path { get; set; }
-            public int RequiredWidth { get; set; }
-            public int RequiredHeight { get; set; }
-        }
+    public class PictureResizeRequest
+    {
+        public string FileName { get; set; }
+        public int RequiredWidth { get; set; }
+        public int RequiredHeight { get; set; }
     }
 }
