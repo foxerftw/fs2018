@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27130.2024
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FaceSender", "FaceSender\FaceSender.csproj", "{E3DF149D-0104-4C2F-BD93-E97280953AF8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FaceSender", "FaceSender\FaceSender.csproj", "{53A5871D-B143-45FD-89CF-122B9440BE02}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{E3DF149D-0104-4C2F-BD93-E97280953AF8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E3DF149D-0104-4C2F-BD93-E97280953AF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E3DF149D-0104-4C2F-BD93-E97280953AF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E3DF149D-0104-4C2F-BD93-E97280953AF8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{53A5871D-B143-45FD-89CF-122B9440BE02}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53A5871D-B143-45FD-89CF-122B9440BE02}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53A5871D-B143-45FD-89CF-122B9440BE02}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53A5871D-B143-45FD-89CF-122B9440BE02}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {B65A38B0-2A64-468F-AAD1-A9510E662C65}
+		SolutionGuid = {485A5DC4-A3D2-4592-9CDE-08EC01BBE228}
 	EndGlobalSection
 EndGlobal
