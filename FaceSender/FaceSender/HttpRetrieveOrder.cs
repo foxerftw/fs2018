@@ -39,7 +39,7 @@ namespace FaceSender
                         RequiredHeight = System.Int32.Parse(resParams[1])
                     });
                 }
-                return new JsonResult(requests);
+                return new JsonResult(new { requests, firstElement.CustomerEmail });
             }
 
             return new NotFoundResult();
