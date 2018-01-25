@@ -18,7 +18,7 @@ namespace FaceSender
     public static class HttpDurableResizePicture
     {
         [FunctionName("HttpDurableResizePicture")]
-        public static async Task<List<string>> RunOrchestrator(
+        public static async Task<string[]> RunOrchestrator(
             [OrchestrationTrigger] DurableOrchestrationContext context)
         {
             var pictureResizeRequests = context.GetInput<List<PictureResizeRequest>>();
@@ -33,10 +33,10 @@ namespace FaceSender
             
             await Task.WhenAll(tasks);
 
-            List<string> resizedPicturesNames = new List<string>();
-            for (int i = 0; i < resizedPicturesNames.Count; i++)
+            string [] resizedPicturesNames = new string[tasks.Length];
+            for (int i = 0; i < tasks.Length; i++)
             {
-                resizedPicturesNames.Add(tasks[i].Result);
+                resizedPicturesNames[i] = tasks[i].Result;
             }
             return resizedPicturesNames;
         }
