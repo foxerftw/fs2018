@@ -21,10 +21,10 @@ namespace FaceSender
         public static async Task<string[]> RunOrchestrator(
             [OrchestrationTrigger] DurableOrchestrationContext context)
         {
-            var pictureResizeRequests = context.GetInput<List<PictureResizeRequest>>();
+            var pictureResizeRequests = context.GetInput<PictureResizeRequest[]>();
 
-            var tasks = new Task<string>[pictureResizeRequests.Count];
-            for (int i = 0; i < pictureResizeRequests.Count; i++)
+            var tasks = new Task<string>[pictureResizeRequests.Length];
+            for (int i = 0; i < pictureResizeRequests.Length; i++)
             {
                 tasks[i] = context.CallActivityAsync<string>(
                 "HttpDurableResizePicture_ResizePicture",
@@ -71,7 +71,7 @@ namespace FaceSender
         {
             var content = req.Content;
             string jsonContent = content.ReadAsStringAsync().Result;
-            dynamic pictureResizeRequests = JsonConvert.DeserializeObject<List<PictureResizeRequest>>(jsonContent);
+            dynamic pictureResizeRequests = JsonConvert.DeserializeObject<PictureResizeRequest[]>(jsonContent);
 
             string instanceId = await starter.StartNewAsync("HttpDurableResizePicture", pictureResizeRequests);
 
